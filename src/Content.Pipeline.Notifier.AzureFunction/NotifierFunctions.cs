@@ -8,7 +8,7 @@ namespace Content.Pipeline.Notifier.AzureFunction
     public class NotifierFunctions
     {
         [FunctionName("NotiferFunction")]
-        public async Task Run(
+        public void Run(
         [ServiceBusTrigger("notifier-topic","NotifierSubscription", Connection = "Servicebus:ServicebusConnectionString")]
         string message,
         Int32 deliveryCount,
